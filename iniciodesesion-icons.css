@@ -1,0 +1,50 @@
+/* iniciodesesion.css */
+
+/* Centro del formulario y fondo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor central */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Cambios en la visibilidad de los formularios */
+.form {
+    display: none;
+}
+
+#login-form, #register-form {
+    transition: all 0.5s ease-in-out;
+}
+
+#register-form {
+    display: none;
+}
+
+/* Estilo de los títulos */
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Enlaces de alternancia */
+#show-register, #show-login {
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+}
