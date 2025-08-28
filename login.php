@@ -8,28 +8,27 @@ if (empty($_SESSION['csrf'])) {
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
 ?>
+
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Iniciar sesión</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Tus CSS existentes -->
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
-<body>
-  <?php if ($flash): ?>
-    <div class="alert"><?=$flash?></div>
-  <?php endif; ?>
-
-  <form method="POST" action="/auth/login.php" autocomplete="off">
-    <label>Correo o usuario</label>
-    <input type="text" name="login" required />
-
-    <label>Contraseña</label>
-    <input type="password" name="password" required />
-
-    <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>" />
-    <button type="submit">Entrar</button>
-  </form>
+<body class="container py-5">
+    <h2>Iniciar Sesión</h2>
+    <?php if(isset($error)): ?><p class="text-danger"><?php echo $error; ?></p><?php endif; ?>
+    <form method="post">
+        <div class="mb-3">
+            <label>Correo</label>
+            <input type="email" name="correo" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label>Contraseña</label>
+            <input type="password" name="password" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+    </form>
 </body>
 </html>

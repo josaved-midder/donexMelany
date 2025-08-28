@@ -55,10 +55,10 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-lg-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" href="index.html">Inicio</a>
+                                <a class="nav-link active" href="index.php">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="registrar.html">registrate</a>
+                                <a class="nav-link active" href="registrar.php">registrate</a>
                             </li>
                            
                             <li class="nav-item">
@@ -81,8 +81,8 @@
                         </ul>
 
                         <div class="ms-4">
-                            <a href="#section_3" class="btn custom-btn custom-border-btn smoothscroll">Empezar</a>
-                        </div>
+                    <a class="nav-link" href="login.php">login</a>        
+                    </div>
                     </div>
                 </div>
             </nav>
